@@ -1,5 +1,8 @@
-import  program  from "commander"
-import  _        from 'lodash'
+/*import  program  from "commander"
+import  _        from 'lodash'*/
+
+let program = require('commander')
+let _       = require('lodash')
 
 let opt =(sign,name)=> [`-${sign} --${name}`,`get ${name}`];
 let op = (parent,...args)=> parent.option(...args)
@@ -27,3 +30,7 @@ let configure_commander = (program,{version,names,options})=>{
 }
 export {command,configure_commander}
 
+let names         =  ['competition','club','fields','staff'];
+let options       =  [['a','agenda'],['r','results'],['c','calendar'],['o','ranking']]
+let configuration =  {names,version:'0.0.1',options}
+configure_commander(program,configuration)
