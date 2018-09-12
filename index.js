@@ -28,5 +28,7 @@ let configure_commander = (program,{version,names,options})=>{
     names.forEach(name=>command(program,name,options))
     program.parse(process.argv)
 }
-export {command,configure_commander}
+
+module.exports = {command,configure_commander}
+//export {command,configure_commander}
 
