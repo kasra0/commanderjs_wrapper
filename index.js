@@ -27,7 +27,3 @@ let configure_commander = (program,{version,names,options})=>{
 }
 export {command,configure_commander}
 
-/*let names         =  ['competition','club','fields','staff'];
-let options       =  [['a','agenda'],['r','results'],['c','calendar'],['o','ranking']]
-let configuration =  {names,version:'0.0.1',options}
-configure_commander(program,configuration)*/
